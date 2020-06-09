@@ -15,7 +15,7 @@ namespace SearchAlgorithms
 
             while (lowIndex <= highIndex)
             {
-                int mid = (int)(lowIndex + (double)(highIndex - lowIndex) / (array[highIndex] - array[lowIndex]) * (searchValue - array[lowIndex]));
+                int mid = (int)((double)(searchValue - array[lowIndex]) / (array[highIndex] - array[lowIndex]) * (highIndex - lowIndex) + lowIndex);
 
                 if (array[mid] == searchValue)
                     return mid;
